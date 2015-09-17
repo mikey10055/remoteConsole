@@ -10,19 +10,28 @@
 
 
 
-
   </head>
   <body>
 
-    <div id="rconsole">
-        Console Window
-
-
-    </div>
+    <div id="rconsole"></div>
 
 
     <script src="js/console.js"></script>
 
-
+    <script>
+    var rc = document.getElementById('rconsole');
+    window.setInterval(function(){
+      $.ajax({
+        method: "POST",
+        url: "check.php",
+        data: { log:  rc.innerHTML}
+        })
+        .done(function( msg ) {
+          if (msg != false) {
+            rconsole.log(msg);
+          }
+      });
+    },1000);
+    </script>
   </body>
 </html>
