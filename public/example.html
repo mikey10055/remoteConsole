@@ -14,10 +14,16 @@
 
 
     <script>
-    aa = 'lala'
-    bb = function(){ alert(1)};
-    rconsole.log('Hello Remote Console!');
-    rconsole.log(bb);
+    rconsole.log('Hello Remote Console this is a log');
+    rconsole.warn('Hello Remote Console this is a warning');
+    rconsole.info('Hello Remote Console this is a info');
+    rconsole.error('Hello Remote Console this is an error');
+
+
+    window.onresize = function() {
+      rconsole.log(window.innerWidth + "x" + window.innerHeight);
+    }
+
     </script>
 
   </body>

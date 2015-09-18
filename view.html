@@ -13,25 +13,15 @@
   </head>
   <body>
 
-    <div id="rconsole"></div>
+    <div id="rconsole">
+      Welcome to Remote Console!<br>
+    </div>
 
 
     <script src="js/console.js"></script>
 
     <script>
-    var rc = document.getElementById('rconsole');
-    window.setInterval(function(){
-      $.ajax({
-        method: "POST",
-        url: "check.php",
-        data: { log:  rc.innerHTML}
-        })
-        .done(function( msg ) {
-          if (msg != false) {
-            rconsole.log(msg);
-          }
-      });
-    },1000);
+
     </script>
   </body>
 </html>

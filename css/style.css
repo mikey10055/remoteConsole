@@ -2,3 +2,8 @@
 
 html, body {height:100%; margin:0px; padding:0px;}
 #rconsole { width:100%; height:100%; padding:16px; background:#282828; color:#ffffff; overflow-y: scroll; margin-right: -17px;}
+
+#rconsole .r-log {}
+#rconsole .r-warn { background:#ffff00;}
+#rconsole .r-info { background:#0055ff;}
+#rconsole .r-error { background:#ff0000;}  

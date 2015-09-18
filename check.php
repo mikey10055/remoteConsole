@@ -1,14 +1,16 @@
 <?php
 
   if (isset($_POST['log'])){
-    $log = file_get_contents('log.txt');
-
-    if (strlen($log) > strlen($_POST['log']) ) {
-
-      echo nl2br($log);
+    $file = 'log.txt';
+    $data = file($file);
+    if (count($data)-1 >= 0) {
+        $line = $data[count($data)-1];
+        $ar = explode(',',$line);
+        echo json_encode($ar);
     } else {
-      echo false;
+      echo json_encode(false);
     }
+
 
   }
 
